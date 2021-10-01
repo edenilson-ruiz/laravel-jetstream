@@ -8,14 +8,28 @@ $links = [
     [
         "href" => [
             [
-                "section_text" => "User",
+                "section_text" => "Paciente",
                 "section_list" => [
-                    ["href" => "user", "text" => "Data User"],
-                    ["href" => "user.new", "text" => "Buat User"]
+                    ["href" => "user", "text" => "Datos Generales"],
+                    ["href" => "user", "text" => "Crear Cita"],
+                    ["href" => "user", "text" => "Preparacion"]
                 ]
             ]
         ],
-        "text" => "User",
+        "text" => "Gestion del Paciente",
+        "is_multi" => true,
+    ],
+    [
+        "href" => [
+            [
+                "section_text" => "Usuario",
+                "section_list" => [
+                    ["href" => "user", "text" => "Listar Usuarios"],
+                    ["href" => "user.new", "text" => "Crear Usuario"]
+                ]
+            ]
+        ],
+        "text" => "Gestion de Usuario",
         "is_multi" => true,
     ],
 ];
@@ -25,11 +39,11 @@ $navigation_links = array_to_object($links);
 <div class="main-sidebar">
     <aside id="sidebar-wrapper">
         <div class="sidebar-brand">
-            <a href="{{ route('dashboard') }}">Dashboard</a>
+            <a href="{{ route('dashboard') }}">SEUR</a>
         </div>
         <div class="sidebar-brand sidebar-brand-sm">
             <a href="{{ route('dashboard') }}">
-                <img class="d-inline-block" width="32px" height="30.61px" src="" alt="">
+                <img class="d-inline-block" width="32px" height="30.61px" src="{{ asset('img/ISRIFull_32x31.png') }}" alt="">
             </a>
         </div>
         @foreach ($navigation_links as $link)

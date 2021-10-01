@@ -11,7 +11,7 @@
 
         <div class="row mb-4">
             <div class="col form-inline">
-                Per Page: &nbsp;
+                Por Pagina: &nbsp;
                 <select wire:model="perPage" class="form-control">
                     <option>10</option>
                     <option>15</option>
@@ -20,7 +20,7 @@
             </div>
 
             <div class="col">
-                <input wire:model="search" class="form-control" type="text" placeholder="Search...">
+                <input wire:model="search" class="form-control" type="text" placeholder="Buscar...">
             </div>
         </div>
 
